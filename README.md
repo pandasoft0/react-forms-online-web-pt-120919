@@ -51,15 +51,13 @@ This turns out to be very useful for a specific purpose - since we can set our
 state _elsewhere_, using this set up, its easy to populate forms from available
 data.
 
-![Diagram of the form component's state populating a form](https://curriculum-content.s3.amazonaws.com/react/react-forms/Image_20_Flowchart.png)
-
 Imagine a user profile page with an 'Edit' button that opens a form for updating
 user info. When a user clicks that 'Edit' button, they expect to see a form with
 their user data pre-populated. This way, they can easily make small changes
 without rewriting all their profile info.
 
 In a React app, all the user info displayed on a user profile would already be
-stored in state somewhere on the application. Its already being displayed after
+stored in state somewhere on the application. It's already being displayed after
 all.  By setting the value of inputs based on state as we did above, we can
 bring in existing state or props and populate a form dynamically.
 
@@ -104,8 +102,6 @@ handleLastNameChange = event => {
   })
 }
 ```
-
-![Diagram of onChange events](https://curriculum-content.s3.amazonaws.com/react/react-forms/Image_21_FlowchartUpdate.png)
 
 The `event` contains data about the `target`, which is whatever the `event` was
 triggered on. That `target`, being an `input`, has a `value` attribute. This
@@ -256,9 +252,8 @@ As you can see, we can easily define the initial value by setting the  `value`
 property on the state to whatever we want. When you enter something into the
 `input`, the value is captured and set as the new state.
 
-![Diagram of a controlled component using props](https://curriculum-content.s3.amazonaws.com/react/react-forms/Image_22_FlowchartReactProps.png)
-
 Doing something with a submitted form also ends up cleaner:
+
 
 ```js
 handleSubmit = event => {
@@ -350,8 +345,6 @@ If we connect this method to both of our `input`s, they will both correctly
 update state. Why? Because for the first `input`, `event.target.name` is set to
 `firstName`, while in the second `input`, it is set to `lastName`. Each
 `input`'s `name` attribute will change which part of state is actually updated!
-
-![Diagram of controlled components using props](https://curriculum-content.s3.amazonaws.com/react/react-forms/Image_23_FlowchartControlled.png)
 
 ## Resources
 
